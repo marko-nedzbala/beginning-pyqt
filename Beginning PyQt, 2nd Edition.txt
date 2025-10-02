@@ -42,20 +42,27 @@ QLabel
 Chapter03
 Adding More Functionality with Widgets
 
+Communication between objects in QT is handled by signals and slots
+Signals: generated whenver an event occurs, signals need to be handled in some way
+Slots: methods that are connected to an event and executed in response to the signal
+
+button.clicked.connect(self.buttonClicked)
+widget.signal.connect(self.slot)
+
+QObject has a sender() returns the object that sends the signal
+sender = self.sender()
+
+Dialog box
+modal dialogs: block user interaction from the rest of the program
+modeless dialogs: allow the user to interact with both the dialog and the rest of the application
+
+When a QWidget is closed, QCloseEvent object is generated, but widgets and windows are not actually closed.
+Want to handle the QApplication.lastWindowClosed() to actually close the window
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+Chapter04
+Learning About Layout Management
 
 
 
